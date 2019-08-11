@@ -22,7 +22,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+if ENV['CI'] == 'true'
+  require 'simplecov'
+
+  SimpleCov.start 'rails' do
+    require 'coverage-badge'
+
+    SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+      [
+        SimpleCov::Formatter::HTMLFormatter,
+        Coverage::Badge::Formatter
+      ]
+    )
+  end
+end
+```
 
 ## Development
 
@@ -32,4 +47,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coverage-badge.
+Bug reports and pull requests are welcome on GitHub at https://github.com/andreyors/coverage-badge.
