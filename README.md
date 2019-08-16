@@ -1,4 +1,4 @@
-# Coverage::Badge
+# Coverage::Badge [![CodeFactor](https://www.codefactor.io/repository/github/andreyors/coverage-badge/badge)](https://www.codefactor.io/repository/github/andreyors/coverage-badge)
 
 Generate a SVG badge for code coverage in your project
 
